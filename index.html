@@ -4,32 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Cabinets Toluco's</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #8B5A2B, #6A4A3C);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #6A4A3C;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc80;
+        }
+        section {
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+        h2 {
+            color: #8B5A2B;
+            font-size: 28px;
+        }
+        .catalog-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .catalog-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .catalog-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .catalog-item h3 {
+            color: #6A4A3C;
+            font-size: 20px;
+        }
+        footer {
+            background-color: #8B5A2B;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Custom Cabinets Toluco's</h1>
         <p>Quality and elegance in wood</p>
     </header>
-    
     <nav>
-        <a href="home.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="testimonials.html">Testimonials</a>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
     </nav>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <form>
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+    <section id="home">
+        <h2>Welcome to Custom Cabinets Toluco's</h2>
+        <p>Specialists in high-quality wood sales and custom cabinet manufacturing in Glendale, Arizona.</p>
     </section>
-    
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We offer a wide range of high-quality woodworking services, including:</p>
+        <ul>
+            <li>Custom cabinet design and manufacturing</li>
+            <li>High-quality wood sales</li>
+            <li>Personalized consultation and installation</li>
+        </ul>
+    </section>
+    <section id="catalog">
+        <h2>Our Catalog</h2>
+        <div class="catalog-container">
+            <div class="catalog-item">
+                <img src="cabinet1.jpg" alt="Elegant Kitchen Cabinet">
+                <h3>Elegant Kitchen Cabinet</h3>
+                <p>High-quality wood with a modern finish. Price: $850</p>
+            </div>
+            <div class="catalog-item">
+                <img src="cabinet2.jpg" alt="Rustic Wooden Cabinet">
+                <h3>Rustic Wooden Cabinet</h3>
+                <p>Perfect for a classic style. Price: $750</p>
+            </div>
+            <div class="catalog-item">
+                <img src="cabinet3.jpg" alt="Luxury Custom Cabinet">
+                <h3>Luxury Custom Cabinet</h3>
+                <p>Personalized to your needs. Price: $1,200</p>
+            </div>
+        </div>
+    </section>
     <footer>
         <p>&copy; 2025 Custom Cabinets Toluco's - All rights reserved</p>
     </footer>
