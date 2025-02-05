@@ -4,77 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Cabinets Toluco's</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f5f0;
-            color: #4a3f35;
-        }
-        header {
-            background: linear-gradient(to right, #8B5A2B, #6A4A3C);
-            color: white;
-            padding: 40px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #6A4A3C;
-            padding: 15px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffcc80;
-        }
-        section {
-            padding: 40px;
-            max-width: 1200px;
-            margin: auto;
-            text-align: center;
-        }
-        h2 {
-            color: #8B5A2B;
-            font-size: 28px;
-        }
-        footer {
-            background-color: #8B5A2B;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        .button {
-            background-color: #8B5A2B;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: background 0.3s;
-        }
-        .button:hover {
-            background-color: #6A4A3C;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 </head>
 <body>
     <header>
         <h1>Custom Cabinets Toluco's</h1>
         <p>Quality and elegance in wood</p>
     </header>
+    
     <nav>
         <a href="#home">Home</a>
         <a href="#services">Services</a>
@@ -82,11 +22,13 @@
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
     </nav>
-    <section id="home">
+    
+    <section id="home" class="hero">
         <h2>Welcome to Custom Cabinets Toluco's</h2>
         <p>Specialists in high-quality wood sales and custom cabinet manufacturing in Glendale, Arizona.</p>
         <a href="#contact" class="button">Contact Us</a>
     </section>
+    
     <section id="services">
         <h2>Our Services</h2>
         <ul>
@@ -95,25 +37,46 @@
             <li>Personalized consultation</li>
         </ul>
     </section>
+    
     <section id="gallery">
         <h2>Gallery</h2>
-        <p>Here you will find images of our projects.</p>
-             <img src="gallery.jpg"  style="width: 300px; height: auto; border-radius: 15px;">
-             <img src="galeria.jpg" style="width: 300px; height: auto; border-radius: 15px;">
-             <img src="table.jpg" style="width: 300px; height: auto; border-radius: 15px;">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="gallery.jpg" alt="Gallery Image"></div>
+                <div class="swiper-slide"><img src="galeria.jpg" alt="Gallery Image"></div>
+                <div class="swiper-slide"><img src="table.jpg" alt="Gallery Image"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
     </section>
+    
     <section id="testimonials">
         <h2>Testimonials</h2>
         <p>Comments and experiences from our customers.</p>
     </section>
+    
     <section id="contact">
         <h2>Contact</h2>
-        <p>Phone: (623) 759-4885</p>
-        <p>Email: customcabineets@gmail.com</p>
-        <p>Address: 5023 N 54th Ave Unit 5 Glandale, AZ 85301</p>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
+    
     <footer>
         <p>&copy; 2025 Custom Cabinets Toluco's - All rights reserved</p>
     </footer>
+    
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+        });
+    </script>
 </body>
 </html>
